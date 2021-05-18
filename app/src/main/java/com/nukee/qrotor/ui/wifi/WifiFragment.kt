@@ -40,9 +40,11 @@ class WifiFragment : Fragment() {
             textView.text = it
         })
 
-        view?.findViewById<Button>(R.id.generateBtn)?.setOnClickListener{
+        val generateButton: Button = binding.generateBtn
+        generateButton.setOnClickListener(){
             qrCodeImage.setImageBitmap(getQrCodeBitmap("f"))
         }
+
 
         return root
     }
