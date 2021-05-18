@@ -12,4 +12,8 @@
     <string name="menu_wifi">WiFi</string>
 
     <string name="QR_code_description">Generated QR Code</string>
+
+    //WiFi strings
+    <string name="wifi_hint">Enter your network name</string>
+    <string name="wifi_password">Enter your network password</string>
 </resources>

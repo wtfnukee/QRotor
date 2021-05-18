@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
+import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.nukee.qrotor.R
 import com.nukee.qrotor.databinding.FragmentWifiBinding
@@ -36,14 +37,22 @@ class WifiFragment : Fragment() {
         val root: View = binding.root
 
         val textView: TextView = binding.textWifi
-        wifiViewModel.text.observe(viewLifecycleOwner, Observer {
+        wifiViewModel.text.observe(viewLifecycleOwner, {
             textView.text = it
         })
 
         val generateButton: Button = binding.generateBtn
         generateButton.setOnClickListener(){
-            qrCodeImage.setImageBitmap(getQrCodeBitmap("f"))
+            qrCodeImage.setImageBitmap(getQrCodeBitmap(SSID_Input.text.toString()))
         }
+
+        //val SSID_Input: EditText = binding.SSIDInput
+
+
+        val Password_Input: EditText = binding.PasswordInput
+
+
+        val Auth_Type: RadioGroup = binding.AuthTypeRadio
 
 
         return root
