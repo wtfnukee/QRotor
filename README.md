@@ -1,3 +1,3 @@
 # QRotor
  
-[![Build Status](https://travis-ci.com/wtfnukee/QRotor.svg?branch=master)
+[Build Status](https://travis-ci.com/wtfnukee/QRotor.svg?branch=master)
