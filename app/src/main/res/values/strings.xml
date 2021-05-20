@@ -8,11 +8,17 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
+    <string name="menu_plain">Plain Text</string>
     <string name="menu_wifi">WiFi</string>
 
     //Image descriptions
     <string name="QR_code_description">Generated QR Code</string>
+
+    //Homepage strings
+    //<string name="home_hint">Enter your text</string>
+
+    //Plain text strings
+    <string name="plain_hint">Enter your text</string>
 
     //WiFi strings
     <string name="wifi_hint">Enter your network name</string>
