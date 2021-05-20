@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.nukee.qrotor.R
 import com.nukee.qrotor.databinding.FragmentWifiBinding
 import com.nukee.qrotor.getQrCodeBitmap
+import com.nukee.qrotor.getWifiCode
 import kotlinx.android.synthetic.main.fragment_wifi.*
 
 
@@ -43,16 +44,19 @@ class WifiFragment : Fragment() {
 
         val generateButton: Button = binding.generateBtn
         generateButton.setOnClickListener(){
-            qrCodeImage.setImageBitmap(getQrCodeBitmap(SSID_Input.text.toString()))
+            qrCodeImage.setImageBitmap(getQrCodeBitmap(getWifiCode(
+                SSID_Input.text.toString(),
+                "WPA",
+                Password_Input.text.toString(),
+                false,
+            )))
         }
 
         //val SSID_Input: EditText = binding.SSIDInput
-
-
-        val Password_Input: EditText = binding.PasswordInput
-
-
-        val Auth_Type: RadioGroup = binding.AuthTypeRadio
+        //var SSID: String = SSID_Input.text.toString()
+        //var Password: String = Password_Input.text.toString()
+        //val Password_Input: EditText = binding.PasswordInput
+        //val Auth_Type: RadioGroup = binding.AuthTypeRadio
 
 
         return root
