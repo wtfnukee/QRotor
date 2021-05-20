@@ -44,6 +44,7 @@ class WifiFragment : Fragment() {
             textView.text = it
         })
 
+        //View bindings
         val SSID_Input: EditText = binding.SSIDInput
         val AuthTypeRadio: RadioGroup = binding.AuthTypeRadio
         val Password_Input = binding.PasswordInput
@@ -51,10 +52,20 @@ class WifiFragment : Fragment() {
 
         generateButton.setOnClickListener(){
             val ssid: String = SSID_Input.text.toString()
-            val AuthTypeSelectedOption = AuthTypeRadio.checkedRadioButtonId
-            val auth_type = resources.getResourceEntryName(AuthTypeSelectedOption)
-            val password: String = Password_Input.text.toString()
 
+            //If auth_type was not selected, then set nopass
+            val AuthTypeSelectedOption = AuthTypeRadio.checkedRadioButtonId
+            lateinit var auth_type: String
+            lateinit var password: String
+            if (AuthTypeSelectedOption==-1) {
+                auth_type = "nopass"
+                password = "nopass"
+            } else {
+                auth_type = resources.getResourceEntryName(AuthTypeSelectedOption)
+                password = Password_Input.text.toString()
+            }
+
+            //TODO: do SSID check
 
             qrCodeImage.setImageBitmap(getQrCodeBitmap(getWifiCode(
                 ssid = ssid,
