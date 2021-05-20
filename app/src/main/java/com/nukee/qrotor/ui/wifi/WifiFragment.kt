@@ -50,10 +50,10 @@ class WifiFragment : Fragment() {
         val generateButton: Button = binding.generateBtn
 
         generateButton.setOnClickListener(){
-            var ssid: String = SSID_Input.text.toString()
-            var AuthTypeSelectedOption = AuthTypeRadio.checkedRadioButtonId
-            var auth_type = resources.getResourceEntryName(AuthTypeSelectedOption)
-            var password: String = Password_Input.text.toString()
+            val ssid: String = SSID_Input.text.toString()
+            val AuthTypeSelectedOption = AuthTypeRadio.checkedRadioButtonId
+            val auth_type = resources.getResourceEntryName(AuthTypeSelectedOption)
+            val password: String = Password_Input.text.toString()
 
 
             qrCodeImage.setImageBitmap(getQrCodeBitmap(getWifiCode(
@@ -63,13 +63,6 @@ class WifiFragment : Fragment() {
                 hidden = false,
             )))
         }
-
-        //val SSID_Input: EditText = binding.SSIDInput
-        //var SSID: String = SSID_Input.text.toString()
-        //var Password: String = Password_Input.text.toString()
-        //val Password_Input: EditText = binding.PasswordInput
-        //val Auth_Type: RadioGroup = binding.AuthTypeRadio
-
 
         return root
     }
