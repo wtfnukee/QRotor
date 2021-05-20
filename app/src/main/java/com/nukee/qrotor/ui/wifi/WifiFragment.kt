@@ -1,5 +1,6 @@
 package com.nukee.qrotor.ui.wifi
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.nukee.qrotor.R
@@ -42,14 +44,21 @@ class WifiFragment : Fragment() {
             textView.text = it
         })
 
-        var ssid: String = SSID_Input.text.toString()
-        var password: String = Password_Input.text.toString()
-
+        val SSID_Input: EditText = binding.SSIDInput
+        val AuthTypeRadio: RadioGroup = binding.AuthTypeRadio
+        val Password_Input = binding.PasswordInput
         val generateButton: Button = binding.generateBtn
+
         generateButton.setOnClickListener(){
+            var ssid: String = SSID_Input.text.toString()
+            var AuthTypeSelectedOption = AuthTypeRadio.checkedRadioButtonId
+            var auth_type = resources.getResourceEntryName(AuthTypeSelectedOption)
+            var password: String = Password_Input.text.toString()
+
+
             qrCodeImage.setImageBitmap(getQrCodeBitmap(getWifiCode(
                 ssid = ssid,
-                auth_type = "WPA",
+                auth_type = auth_type,
                 password = password,
                 hidden = false,
             )))
@@ -64,6 +73,7 @@ class WifiFragment : Fragment() {
 
         return root
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
