@@ -15,7 +15,7 @@ before_cache:
   - chmod +x gradlew
   - chmod +x gradle/wrapper/gradle-wrapper.jar      
 
-script: ./gradlew check --info --stacktrace --console=plain --max-workers=1 --no-daemon --build-cache -Dkotlin.colors.enabled=false
+script: sudo ./gradlew check --info --stacktrace --console=plain --max-workers=1 --no-daemon --build-cache -Dkotlin.colors.enabled=false
 
 cache:
   directories:
