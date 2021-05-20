@@ -1,6 +1,5 @@
 package com.nukee.qrotor.ui.wifi
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +8,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.nukee.qrotor.R
 import com.nukee.qrotor.databinding.FragmentWifiBinding
 import com.nukee.qrotor.getQrCodeBitmap
 import com.nukee.qrotor.getWifiCode
@@ -67,7 +64,7 @@ class WifiFragment : Fragment() {
 
             //TODO: do SSID check
 
-            qrCodeImage.setImageBitmap(getQrCodeBitmap(getWifiCode(
+            qrCodeImage_wifi.setImageBitmap(getQrCodeBitmap(getWifiCode(
                 ssid = ssid,
                 auth_type = auth_type,
                 password = password,

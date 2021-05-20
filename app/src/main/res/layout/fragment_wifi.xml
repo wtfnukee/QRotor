@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/generateBtn"
+        android:id="@+id/generateBtn_wifi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
@@ -32,11 +32,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/qrCodeImage"
+        android:id="@+id/qrCodeImage_wifi"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:contentDescription="@string/QR_code_description"
-        app:layout_constraintBottom_toTopOf="@id/generateBtn"
+        app:layout_constraintBottom_toTopOf="@id/generateBtn_wifi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
