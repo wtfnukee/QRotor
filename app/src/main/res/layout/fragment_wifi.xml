@@ -56,14 +56,14 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <RadioButton
-            android:id="@+id/WEP_Radio"
+            android:id="@+id/WEP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="WEP" />
 
         <RadioButton
-            android:id="@+id/WPA_Radio"
+            android:id="@+id/WPA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
