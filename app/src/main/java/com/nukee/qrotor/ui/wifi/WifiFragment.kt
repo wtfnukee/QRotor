@@ -42,12 +42,15 @@ class WifiFragment : Fragment() {
             textView.text = it
         })
 
+        var SSID: String = SSID_Input.text.toString()
+        var Password: String = Password_Input.text.toString()
+
         val generateButton: Button = binding.generateBtn
         generateButton.setOnClickListener(){
             qrCodeImage.setImageBitmap(getQrCodeBitmap(getWifiCode(
-                SSID_Input.text.toString(),
+                SSID,
                 "WPA",
-                Password_Input.text.toString(),
+                Password,
                 false,
             )))
         }
