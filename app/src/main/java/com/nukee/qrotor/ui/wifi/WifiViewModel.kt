@@ -14,5 +14,4 @@ class WifiViewModel : ViewModel() {
     }
     val text: LiveData<String> = _text
 
-
 }
