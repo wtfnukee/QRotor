@@ -11,6 +11,7 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_wifi">WiFi</string>
 
+    //Image descriptions
     <string name="QR_code_description">Generated QR Code</string>
 
     //WiFi strings

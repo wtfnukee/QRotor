@@ -8,5 +8,3 @@ fun getWifiCode(ssid: String, auth_type: String, password: String, hidden: Boole
 fun getTelephoneCode(number: String): String {
     return "tel:$number"
 }
-
-
