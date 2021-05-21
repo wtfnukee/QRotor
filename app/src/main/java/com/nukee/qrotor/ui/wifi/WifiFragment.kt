@@ -45,7 +45,7 @@ class WifiFragment : Fragment() {
         val SSID_Input: EditText = binding.SSIDInput
         val AuthTypeRadio: RadioGroup = binding.AuthTypeRadio
         val Password_Input = binding.PasswordInput
-        val generateButton: Button = binding.generateBtn
+        val generateButton: Button = binding.generateBtnWifi
 
         generateButton.setOnClickListener(){
             val ssid: String = SSID_Input.text.toString()
